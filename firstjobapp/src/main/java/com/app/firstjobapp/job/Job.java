@@ -1,7 +1,10 @@
 package com.app.firstjobapp.job;
 
 import com.app.firstjobapp.company.Company;
+<<<<<<< HEAD
 import com.fasterxml.jackson.annotation.JsonIgnore;
+=======
+>>>>>>> a10dc5efc3d129a929f19e1b64e51daddab4d309
 import jakarta.persistence.*;
 
 @Entity
@@ -17,7 +20,10 @@ public class Job {
     private String location;
 
     @ManyToOne
+<<<<<<< HEAD
     @JsonIgnore
+=======
+>>>>>>> a10dc5efc3d129a929f19e1b64e51daddab4d309
     private Company company;
 
     public Job() {

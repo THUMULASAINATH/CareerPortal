@@ -19,6 +19,10 @@ public class JobServiceImpl implements JobService {
     //private List<Job> jobs = new ArrayList<>();
     JobRepository jobRepository;
     CompanyService companyService;
+<<<<<<< HEAD
+=======
+    private Long nextId = 1L;
+>>>>>>> a10dc5efc3d129a929f19e1b64e51daddab4d309
 
     public JobServiceImpl(JobRepository jobRepository,CompanyService companyService) {
         this.jobRepository = jobRepository;
@@ -32,15 +36,22 @@ public class JobServiceImpl implements JobService {
     }
 
     @Override
+<<<<<<< HEAD
     public boolean createJob(Job job,Long id) {
+=======
+    public void createJob(Job job,Long id) {
+>>>>>>> a10dc5efc3d129a929f19e1b64e51daddab4d309
         Company company = companyService.getCompanyById(id);
         if (company != null){
             job.setCompany(company);
             jobRepository.save(job);
+<<<<<<< HEAD
             return true;
         }
         else {
             return false;
+=======
+>>>>>>> a10dc5efc3d129a929f19e1b64e51daddab4d309
         }
 
     }
@@ -52,10 +63,17 @@ public class JobServiceImpl implements JobService {
 
     @Override
     public boolean deleteJobById(Long id) {
+<<<<<<< HEAD
         if (jobRepository.existsById(id)){
             jobRepository.deleteById(id);
             return true;
         } else {
+=======
+        try {
+            jobRepository.deleteById(id);
+            return true;
+        } catch (Exception e){
+>>>>>>> a10dc5efc3d129a929f19e1b64e51daddab4d309
             return false;
         }
     }

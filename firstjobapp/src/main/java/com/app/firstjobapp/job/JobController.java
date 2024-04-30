@@ -31,11 +31,16 @@ public class JobController {
     @PostMapping("/{id}")
     public ResponseEntity<String> createJob(@RequestBody Job job, @PathVariable Long id){
 
+<<<<<<< HEAD
         boolean result=jobService.createJob(job,id);
         if (result)
         return new ResponseEntity<>("Job added successfully",HttpStatus.CREATED);
         else
             return new ResponseEntity<>("Job not added",HttpStatus.NOT_FOUND);
+=======
+        jobService.createJob(job,id);
+        return new ResponseEntity<>("Job added successfully",HttpStatus.CREATED);
+>>>>>>> a10dc5efc3d129a929f19e1b64e51daddab4d309
     }
 
     //@GetMapping("/jobs/{id}")
@@ -56,7 +61,11 @@ public class JobController {
         boolean deleted = jobService.deleteJobById(id);
         if (deleted)
             return new ResponseEntity<>("Job Deleted Sucessfully",HttpStatus.OK);
+<<<<<<< HEAD
         return new ResponseEntity<>("Job Details Not Found",HttpStatus.NOT_FOUND);
+=======
+        return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+>>>>>>> a10dc5efc3d129a929f19e1b64e51daddab4d309
     }
     //@PutMapping("/jobs/{id}")
     //or

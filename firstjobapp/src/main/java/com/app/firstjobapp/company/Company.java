@@ -15,6 +15,10 @@ public class Company {
     private String name;
     private String description;
     @OneToMany(mappedBy = "company")
+<<<<<<< HEAD
+=======
+    @JsonIgnore
+>>>>>>> a10dc5efc3d129a929f19e1b64e51daddab4d309
     private List<Job> jobs;
 
 
