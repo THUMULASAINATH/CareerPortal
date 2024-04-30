@@ -56,7 +56,7 @@ public class JobController {
         boolean deleted = jobService.deleteJobById(id);
         if (deleted)
             return new ResponseEntity<>("Job Deleted Sucessfully",HttpStatus.OK);
-        return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        return new ResponseEntity<>("Job Details Not Found",HttpStatus.NOT_FOUND);
     }
     //@PutMapping("/jobs/{id}")
     //or
