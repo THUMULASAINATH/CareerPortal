@@ -1,2 +1,2 @@
 # CareerPortal
-API to create compnay profile, associated job list and review to company.
+This is an Career Portal API designed using Java Spring Boot, which enables us to manage jobs, track application ect.
